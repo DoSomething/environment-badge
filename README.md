@@ -21,7 +21,7 @@ require('environment-badge')();
 For applications without a front-end build system, you can embed this script from [unpkg](https://unpkg.com):
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.2"></script>
+<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.2/dist/bundle.js"></script>
 ```
 
 

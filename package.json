@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "browser": "dist/index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "NODE_ENV=unknown babel src -d dist --minified",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

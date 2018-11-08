@@ -16,6 +16,10 @@ export default () => {
     environmentName = 'qa';
     backgroundColor = '#23b7fb';
     foregroundColor = '#fff';
+  } else if (subdomain.indexOf('-preview') != -1) {
+    environmentName = 'preview';
+    backgroundColor = '#22BC66';
+    foregroundColor = '#fff';
   }
 
   // Create the badge and add it to the page:

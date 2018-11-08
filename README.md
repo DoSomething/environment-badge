@@ -15,13 +15,13 @@
 If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:
 
 ```js
-import 'environment-badge';
+require('environment-badge')();
 ```
 
 For applications without a front-end build system, you can embed this script from [unpkg](https://unpkg.com):
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.1"></script>
+<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.2"></script>
 ```
 
 

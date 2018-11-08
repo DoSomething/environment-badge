@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Add a visual \"badge\" indicator to differentiate QA environments from production.",
   "main": "lib/index.js",
+  "files": ["dist"],
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "npm run build:browser && npm run build:cjs",

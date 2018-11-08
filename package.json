@@ -1,6 +1,6 @@
 {
   "name": "environment-badge",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Add a visual \"badge\" indicator to differentiate QA environments from production.",
   "main": "lib/index.js",
   "scripts": {

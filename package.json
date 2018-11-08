@@ -1,0 +1,26 @@
+{
+  "name": "environment-badge",
+  "version": "0.0.1",
+  "description": "Add a visual \"badge\" indicator to differentiate QA environments from production.",
+  "main": "src/index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "build": "NODE_ENV=unknown babel src -d dist --minified",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "@dosomething/babel-config"
+    ],
+    "plugins": [
+      "transform-inline-environment-variables"
+    ]
+  },
+  "author": "David Furnes <dfurnes@dosomething.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@dosomething/babel-config": "^2.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
+  }
+}

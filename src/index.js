@@ -30,6 +30,9 @@ if (process.env.NODE_ENV !== 'production') {
       </div>
     `;
 
-    document.body.appendChild(environmentBadge);
+    // Apply badge to Forge container if it exists, or the body:
+    var container = document.querySelector('.chrome > .wrapper') || document.body;
+    container.appendChild(environmentBadge);
+    container.style.overflow = 'hidden'; // awkward, but required so badge doesn't overflow!
   }
 }

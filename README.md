@@ -1,22 +1,31 @@
-# Environment Badge
+<p align="center">
+  <img width="801" height="auto" alt="preview" src="https://user-images.githubusercontent.com/583202/48219897-d3d0b680-e35b-11e8-9ad6-356fa14eeeb9.png">
+</p>
 
-This is a simple __environment badge__, which can be used to indicate what application environment you're currently in. For now, environments are hard-coded to what we use at DoSomething.org.
+<p align="center">
+  <strong>environment-badge</strong> - simple plug-and-play environment indicators
+</p>
 
-## Usage
-If you're building your application with [Webpack](), [Create React App](), or a similar tool, simply import this module:
+<p align="center">
+  <a href="https://npmjs.org/package/environment-badge"><img alt="npm version" src="https://img.shields.io/npm/v/environment-badge.svg"></a>  <a href="https://bundlephobia.com/result?p=environment-badge"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/environment-badge.svg" /></a>
+</p>
+<br/><br/><br/>
 
-```
+### Usage
+If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:
+
+```js
 import 'environment-badge';
 ```
 
 For applications without a front-end build system, you can embed this script from [unpkg](https://unpkg.com):
 
-```
-<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.1/dist.js"></script>
+```html
+<script type="text/javascript" src="https://unpkg.com/environment-badge@0.0.1"></script>
 ```
 
 
-## License
+### License
 
 &copy; DoSomething.org. environment-badge is free software, and may be redistributed under the terms specified
 in the [LICENSE](https://github.com/DoSomething/environment-badge/blob/master/LICENSE) file. The name and logo for

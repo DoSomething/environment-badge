@@ -7,7 +7,7 @@
     "prepublishOnly": "npm run build",
     "build": "npm run build:browser && npm run build:cjs",
     "build:browser": "NODE_ENV=production rollup --config --environment NODE_ENV",
-    "build:cjs": "babel src -d lib --plugins transform-es2015-modules-commonjs",
+    "build:cjs": "babel src -d lib --plugins transform-es2015-modules-commonjs,add-module-exports",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@dosomething/babel-config": "^2.2.2",
     "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "rollup": "^0.67.0",
     "rollup-plugin-babel": "^3.0.0"

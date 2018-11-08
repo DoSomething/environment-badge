@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://npmjs.org/package/environment-badge"><img alt="npm version" src="https://img.shields.io/npm/v/environment-badge.svg"></a>  <a href="https://bundlephobia.com/result?p=environment-badge"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/environment-badge.svg" /></a>
+  <a href="https://npmjs.org/package/environment-badge"><img alt="npm version" src="https://img.shields.io/npm/v/environment-badge.svg?style=flat"></a>  <a href="https://bundlephobia.com/result?p=environment-badge"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/environment-badge.svg?style=flat" /></a>
 </p>
 <br/><br/><br/>
 

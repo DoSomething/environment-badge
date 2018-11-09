@@ -1,34 +1,40 @@
-export default () => {
-  const host = window.location.host;
-  const subdomain = host.split('.')[0];
-
-  // Choose appearance based on the environment we're in:
-  let environmentName, backgroundColor, foregroundColor;
-  if (host.indexOf('.test') != -1 || host.indexOf('localhost') != -1) {
-    environmentName = 'local';
-    backgroundColor = '#ddd';
-    foregroundColor = '#000';
-  } else if (subdomain.indexOf('-dev') != -1) {
-    environmentName = 'dev';
-    backgroundColor = '#fcd116';
-    foregroundColor = '#000';
-  } else if (subdomain.indexOf('-qa') != -1) {
-    environmentName = 'qa';
-    backgroundColor = '#23b7fb';
-    foregroundColor = '#fff';
-  } else if (subdomain.indexOf('-preview') != -1) {
-    environmentName = 'preview';
-    backgroundColor = '#22BC66';
-    foregroundColor = '#fff';
+const DEFAULT_ENVIRONMENTS = [
+  {
+    name: 'local',
+    host: /(^localhost$|\.test$)/,
+  },
+  {
+    name: 'dev',
+    host: /^([a-z0-9-]*-)?dev\./,
+    backgroundColor: '#fcd116',
+  },
+  {
+    name: 'qa',
+    host: /^([a-z0-9-]*-)?qa\./,
+    backgroundColor: '#23b7fb',
+    foregroundColor: '#fff',
+  },
+  {
+    name: 'preview',
+    host: /^([a-z0-9-]*-)?preview\./,
+    backgroundColor: '#22BC66',
+    foregroundColor: '#fff',
   }
+]
+
+export default (environments = DEFAULT_ENVIRONMENTS) => {
+  const environment = environments.find(
+    environment => environment.host.test(window.location.host)
+  );
 
   // Create the badge and add it to the page:
-  if (environmentName) {
+  if (environment) {
+    const { name, backgroundColor = '#ddd', foregroundColor = '#000' } = environment;
     const environmentBadge = document.createElement('div');
     environmentBadge.innerHTML = `
         <div style="display: block; position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: ${backgroundColor}; color: ${foregroundColor}; transform: rotate(-45deg); z-index: 9999;">
           <span style="display: block; position: relative; top: 85%; font-size: 12px; text-align: center; font-weight: bold; text-transform: uppercase; transform: translateY(-50%); cursor: default;">
-            ${environmentName}
+            ${name}
           </span>
         </div>
       `;

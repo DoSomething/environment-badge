@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>environment-badge</strong> - simple plug-and-play environment indicators
+  <strong>environment-badge</strong> - simple zero-dependency environment indicators
 </p>
 
 <p align="center">

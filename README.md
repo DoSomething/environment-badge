@@ -9,7 +9,14 @@
 <p align="center">
   <a href="https://npmjs.org/package/environment-badge"><img alt="npm version" src="https://img.shields.io/npm/v/environment-badge.svg?style=flat"></a>  <a href="https://bundlephobia.com/result?p=environment-badge"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/environment-badge.svg?style=flat" /></a>
 </p>
-<br/><br/><br/>
+<br/><br/>
+
+It's easy to get disoriented when your application runs in multiple environments. This package checks the domain & adds a simple indicator to let you know when you're not on production. It looks for the following environments out of the box:
+
+* Local development, at `localhost` or `.test` subdomains.
+* Development environemnts, at `dev.` or `*-dev.` sudomains.
+* QA environemnts, at `qa.` or `*-qa.` sudomains.
+* Preview environemnts, at `preview.` or `*-preview.` sudomains.
 
 ### Usage
 If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:
@@ -24,6 +31,23 @@ For applications without a front-end build system, you can embed this script fro
 <script type="text/javascript" src="https://unpkg.com/environment-badge@^1.0.0/dist/bundle.js"></script>
 ```
 
+### Advanced Usage
+You can customize what environments are checked for by providing an array. For example:
+
+```js
+require('environment-badge')([
+  {
+    name: 'local',
+    host: /(^localhost$|\.test$)/,
+  },
+  {
+    name: 'staging',
+    host: /^([a-z0-9-]*-)?staging\./,
+    backgroundColor: '#000000',
+    foregroundColor: '#fcd116',
+  },
+]);
+```
 
 ### License
 

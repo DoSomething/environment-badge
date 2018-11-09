@@ -13,10 +13,10 @@
 
 It's easy to get disoriented when your application runs in multiple environments. This package checks the domain & adds a simple indicator to let you know when you're not on production. It looks for the following environments out of the box:
 
-* Local development, at `localhost` or `.test` subdomains.
-* Development environemnts, at `dev.` or `*-dev.` sudomains.
-* QA environemnts, at `qa.` or `*-qa.` sudomains.
-* Preview environemnts, at `preview.` or `*-preview.` sudomains.
+* Local development, at `localhost` or `.test` domains.
+* Development environments, at `dev.` or `*-dev.` subdomains.
+* QA environments, at `qa.` or `*-qa.` subdomains.
+* Preview environments, at `preview.` or `*-preview.` subdomains.
 
 ### Usage
 If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:

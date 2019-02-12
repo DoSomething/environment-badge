@@ -1,7 +1,7 @@
 const DEFAULT_ENVIRONMENTS = [
   {
     name: 'local',
-    host: /(^localhost$|\.test$)/,
+    host: /(^localhost(:[0-9]+)?$|\.test$)/,
   },
   {
     name: 'dev',

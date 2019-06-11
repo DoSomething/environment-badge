@@ -37,11 +37,11 @@ You can customize what environments are checked for by providing an array. For e
 ```js
 require('environment-badge')([
   {
-    name: 'local',
+    displayName: 'local',
     host: /(^localhost$|\.test$)/,
   },
   {
-    name: 'staging',
+    displayName: 'staging',
     host: /^([a-z0-9-]*-)?staging\./,
     backgroundColor: '#000000',
     foregroundColor: '#fcd116',

@@ -3,8 +3,10 @@
   "version": "1.2.1",
   "description": "Add a visual \"badge\" indicator to differentiate QA environments from production.",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "prepublishOnly": "npm run build",

@@ -5,8 +5,10 @@
   "author": "David Furnes <dfurnes@dosomething.org>",
   "license": "MIT",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "prepublishOnly": "npm run build",

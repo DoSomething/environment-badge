@@ -13,6 +13,7 @@
     "build": "npm run build:browser && npm run build:cjs",
     "build:browser": "NODE_ENV=production rollup --config --environment NODE_ENV",
     "build:cjs": "babel src -d lib --plugins transform-es2015-modules-commonjs,add-module-exports",
+    "format": "prettier --write \"**/*.{js,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {

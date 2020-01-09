@@ -23,7 +23,7 @@ It's easy to get disoriented when your application runs in multiple environments
 If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:
 
 ```js
-require("environment-badge")();
+require('environment-badge')();
 ```
 
 For applications without a front-end build system, you can embed this script from [unpkg](https://unpkg.com):
@@ -40,17 +40,17 @@ For applications without a front-end build system, you can embed this script fro
 You can customize what environments are checked for by providing an array. For example:
 
 ```js
-require("environment-badge")([
+require('environment-badge')([
   {
-    displayName: "local",
-    host: /(^localhost$|\.test$)/
+    displayName: 'local',
+    host: /(^localhost$|\.test$)/,
   },
   {
-    displayName: "staging",
+    displayName: 'staging',
     host: /^([a-z0-9-]*-)?staging\./,
-    backgroundColor: "#000000",
-    foregroundColor: "#fcd116"
-  }
+    backgroundColor: '#000000',
+    foregroundColor: '#fcd116',
+  },
 ]);
 ```
 

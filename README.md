@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="801" height="auto" alt="preview" src="https://user-images.githubusercontent.com/583202/48219897-d3d0b680-e35b-11e8-9ad6-356fa14eeeb9.png">
+  <img width="801" height="auto" alt="preview" src="https://user-images.githubusercontent.com/105849/72086453-f00c1280-32d4-11ea-80bc-f142ab6e75d7.png">
 </p>
 
 <p align="center">
@@ -13,39 +13,44 @@
 
 It's easy to get disoriented when your application runs in multiple environments. This package checks the domain & adds a simple indicator to let you know when you're not on production. It looks for the following environments out of the box:
 
-* Local development, at `localhost` or `.test` domains.
-* Development environments, at `dev.` or `*-dev.` subdomains.
-* QA environments, at `qa.` or `*-qa.` subdomains.
-* Preview environments, at `preview.` or `*-preview.` subdomains.
+- Local development, at `localhost` or `.test` domains.
+- Development environments, at `dev.` or `*-dev.` subdomains.
+- QA environments, at `qa.` or `*-qa.` subdomains.
+- Preview environments, at `preview.` or `*-preview.` subdomains.
 
 ### Usage
+
 If you're building your application with [Webpack](https://webpack.js.org), [Create React App](https://facebook.github.io/create-react-app/), or a similar tool, simply import this module:
 
 ```js
-require('environment-badge')();
+require("environment-badge")();
 ```
 
 For applications without a front-end build system, you can embed this script from [unpkg](https://unpkg.com):
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/environment-badge@^1.0.0/dist/bundle.js"></script>
+<script
+  type="text/javascript"
+  src="https://unpkg.com/environment-badge@^1.0.0/dist/bundle.js"
+></script>
 ```
 
 ### Advanced Usage
+
 You can customize what environments are checked for by providing an array. For example:
 
 ```js
-require('environment-badge')([
+require("environment-badge")([
   {
-    displayName: 'local',
-    host: /(^localhost$|\.test$)/,
+    displayName: "local",
+    host: /(^localhost$|\.test$)/
   },
   {
-    displayName: 'staging',
+    displayName: "staging",
     host: /^([a-z0-9-]*-)?staging\./,
-    backgroundColor: '#000000',
-    foregroundColor: '#fcd116',
-  },
+    backgroundColor: "#000000",
+    foregroundColor: "#fcd116"
+  }
 ]);
 ```
 

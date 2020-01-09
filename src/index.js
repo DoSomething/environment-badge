@@ -1,25 +1,25 @@
 const DEFAULT_ENVIRONMENTS = [
   {
-    displayName: "local",
-    host: /(^localhost(:[0-9]+)?$|\.test$)/
+    displayName: 'local',
+    host: /(^localhost(:[0-9]+)?$|\.test$)/,
   },
   {
-    displayName: "dev",
+    displayName: 'dev',
     host: /^([a-z0-9-]*-)?dev\./,
-    backgroundColor: "#fcd116"
+    backgroundColor: '#fcd116',
   },
   {
-    displayName: "qa",
+    displayName: 'qa',
     host: /^([a-z0-9-]*-)?qa\./,
-    backgroundColor: "#23b7fb",
-    foregroundColor: "#fff"
+    backgroundColor: '#23b7fb',
+    foregroundColor: '#fff',
   },
   {
-    displayName: "preview",
+    displayName: 'preview',
     host: /^([a-z0-9-]*-)?preview\./,
-    backgroundColor: "#22BC66",
-    foregroundColor: "#fff"
-  }
+    backgroundColor: '#22BC66',
+    foregroundColor: '#fff',
+  },
 ];
 
 export default (environments = DEFAULT_ENVIRONMENTS) => {
@@ -36,24 +36,24 @@ export default (environments = DEFAULT_ENVIRONMENTS) => {
   if (environment) {
     const {
       displayName,
-      backgroundColor = "#000", //#cbd5e0
-      foregroundColor = "#fff"
+      backgroundColor = '#000',
+      foregroundColor = '#fff',
     } = environment;
-    const environmentBadge = document.createElement("div");
+    const environmentBadge = document.createElement('div');
     environmentBadge.innerHTML =
       '\
         <div style="display: block; position: fixed; top: -50px; left: -50px; width: 100px; height: 100px; background: ' +
       backgroundColor +
-      "; color: " +
+      '; color: ' +
       foregroundColor +
       '; transform: rotate(-45deg); z-index: 9999;">\
           <span style="display: block; position: relative; top: 85%; font-size: 12px; text-align: center; font-weight: bold; text-transform: uppercase; transform: translateY(-50%); cursor: default;">\
             ' +
       displayName +
-      "\
+      '\
           </span>\
         </div>\
-      ";
+      ';
 
     document.body.appendChild(environmentBadge);
   }

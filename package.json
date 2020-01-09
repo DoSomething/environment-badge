@@ -2,6 +2,8 @@
   "name": "environment-badge",
   "version": "1.2.1",
   "description": "Add a visual \"badge\" indicator to differentiate QA environments from production.",
+  "author": "David Furnes <dfurnes@dosomething.org>",
+  "license": "MIT",
   "main": "lib/index.js",
   "files": [
     "dist"
@@ -23,14 +25,20 @@
       ]
     ]
   },
-  "author": "David Furnes <dfurnes@dosomething.org>",
-  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
     "@dosomething/babel-preset": "^3.2.0",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "husky": "^4.0.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",

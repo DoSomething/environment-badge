@@ -39,14 +39,19 @@ export default (environments = DEFAULT_ENVIRONMENTS) => {
       backgroundColor = '#000',
       foregroundColor = '#fff',
     } = environment;
+
     const environmentBadge = document.createElement('div');
-    environmentBadge.innerHTML = `
-      <div style="display: block; position: fixed; top: -50px; left: -50px; width: 100px; height: 100px; background: ${backgroundColor}; color: ${foregroundColor}; transform: rotate(-45deg); z-index: 9999;">
-        <span style="display: block; position: relative; top: 85%; font-size: 12px; text-align: center; font-weight: bold; text-transform: uppercase; transform: translateY(-50%); cursor: default;">
-          ${displayName}
-        </span>
-      </div>
-    `;
+
+    // prettier-ignore
+    // Using traditional string concatenation to avoid Babel including the
+    // 9KB Array.prototype.concat to polyfill support for template tags.
+    environmentBadge.innerHTML = '\
+    <div style="display: block; position: fixed; top: -50px; left: -50px; width: 100px; height: 100px; background: ' + backgroundColor + '; color: ' + foregroundColor + '; transform: rotate(-45deg); z-index: 9999;">\
+      <span style="display: block; position: relative; top: 85%; font-size: 12px; text-align: center; font-weight: bold; text-transform: uppercase; transform: translateY(-50%); cursor: default;">\
+        ' + displayName + '\
+      </span>\
+    </div>\
+  ';
 
     document.body.appendChild(environmentBadge);
   }
